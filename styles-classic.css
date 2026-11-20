@@ -1,0 +1,398 @@
+/* ===========================
+   Broadford Montessori – "Classic" alternate style
+   =========================== */
+
+:root {
+  --navy:       #1c2d4a;
+  --navy-deep:  #13203a;
+  --cream:      #faf6ef;
+  --cream-alt:  #f1eee4;
+  --gold:       #a9842f;
+  --gold-light: #e7cf8a;
+  --sage:       #5b7a63;
+  --text:       #2a2a28;
+  --text-mid:   #5c5a55;
+  --text-light: rgba(250,246,239,0.82);
+  --radius:     6px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+h1, h2, h3, .logo-title {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Header ── */
+.site-header {
+  background: var(--cream);
+  border-bottom: 2px solid var(--gold-light);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.logo-icon { font-size: 1.7rem; line-height: 1; }
+
+.logo-text { display: flex; flex-direction: column; }
+.logo-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.1;
+}
+.logo-sub {
+  font-size: 0.7rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.75rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: transform 0.12s, box-shadow 0.12s, background 0.12s;
+  letter-spacing: 0.01em;
+}
+
+.btn:hover { transform: translateY(-1px); }
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--cream);
+}
+.btn-gold:hover { background: #967730; box-shadow: 0 6px 16px rgba(169,132,47,0.3); }
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--navy);
+  color: var(--navy);
+}
+.btn-outline:hover { background: var(--navy); color: var(--cream); }
+
+/* ── Hero ── */
+.hero {
+  background:
+    radial-gradient(ellipse 900px 500px at 50% -10%, rgba(169,132,47,0.1), transparent),
+    linear-gradient(180deg, #ffffff 0%, var(--cream) 60%);
+  padding: 5rem 0 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-light) 50%, transparent);
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  margin-bottom: 0.9rem;
+}
+
+.eyebrow-light { color: var(--gold-light); }
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 2.9rem);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 1.1rem;
+  line-height: 1.25;
+}
+
+.hero .tagline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--navy);
+  max-width: 480px;
+  margin: 0 auto 1.1rem;
+}
+
+.hero .lead-sub {
+  font-size: 1.05rem;
+  color: var(--text-mid);
+  max-width: 480px;
+  margin: 0 auto 2rem;
+}
+
+.facts-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 2.25rem;
+  letter-spacing: 0.01em;
+}
+
+.facts-row .divider {
+  color: var(--gold-light);
+  font-size: 0.6rem;
+}
+
+/* ── Sections ── */
+.section {
+  padding: 4.5rem 0;
+  border-top: 1px solid var(--gold-light);
+  position: relative;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+.section-tint { background: var(--cream-alt); }
+
+.section-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 1.25rem;
+  line-height: 1.25;
+}
+
+.section p {
+  color: var(--text-mid);
+  margin-bottom: 1rem;
+  font-size: 1.02rem;
+}
+
+.section p:last-of-type { margin-bottom: 0; }
+.lead { font-size: 1.08rem; color: var(--text); font-weight: 500; margin-bottom: 1rem; }
+
+/* ── Pillars ── */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.1rem;
+  margin-top: 2.25rem;
+}
+
+.pillar {
+  border: 1.5px solid var(--cream-alt);
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.4rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(28,45,74,0.05);
+}
+
+.pillar-icon {
+  font-size: 1.7rem;
+  margin-bottom: 0.65rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1.5px solid var(--gold-light);
+  border-radius: 50%;
+}
+.pillar h3   { font-size: 1.02rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--navy); }
+.pillar p    { font-size: 0.9rem; color: var(--text-mid); margin: 0; }
+
+/* ── Team ── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.1rem;
+  margin-top: 2.25rem;
+}
+
+.team-card {
+  text-align: center;
+  padding: 1.25rem 1rem;
+}
+
+.team-avatar {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 0.85rem;
+  border-radius: 50%;
+  background: var(--navy);
+  border: 2px solid var(--gold);
+  color: var(--cream);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; color: var(--navy); }
+.team-card p  { font-size: 0.85rem; color: var(--text-mid); margin: 0; text-transform: uppercase; letter-spacing: 0.03em; }
+
+/* ── Sessions ── */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.1rem;
+  margin: 2rem 0;
+}
+
+.stat-card {
+  background: var(--navy);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+}
+
+.stat-value {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.ecce-box {
+  background: var(--cream-alt);
+  border: 1.5px solid var(--gold-light);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.6rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--text-mid);
+}
+
+.ecce-box strong { color: var(--navy); }
+
+.ecce-links {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+}
+
+.ecce-links a { color: var(--gold); font-weight: 600; }
+.ecce-links a:hover { text-decoration: underline; }
+
+/* ── Contact ── */
+.contact-section {
+  background: var(--navy);
+  padding: 4.5rem 0;
+  text-align: center;
+  border-top: 1px solid var(--gold-light);
+  position: relative;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  color: var(--cream);
+}
+
+.contact-section > .container > p:not(.eyebrow) {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.contact-address {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.map-shell {
+  margin-top: 2rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 2px solid var(--gold);
+}
+
+/* ── Footer ── */
+.site-footer {
+  background: var(--navy-deep);
+  color: rgba(250,246,239,0.55);
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .header-cta { display: none; }
+  .hero { padding: 3rem 0 2.5rem; }
+  .facts-row { font-size: 0.82rem; }
+}
