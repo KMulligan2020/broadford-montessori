@@ -45,13 +45,17 @@ body {
 
 /* ── Header ── */
 .site-header {
-  background: var(--white);
-  border-bottom: 1px solid #f0eeeb;
+  background: #ffe3ea;
+  border-bottom: 1px solid #ffc7d6;
   padding: 0.9rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.site-header .logo-sub {
+  color: #99475c;
 }
 
 .header-inner {
@@ -125,6 +129,15 @@ body {
   color: var(--text-mid);
   max-width: 500px;
   margin: 0 auto 1.75rem;
+}
+
+.hero .tagline {
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #d4729c;
+  max-width: 460px;
+  margin: 0 auto 1rem;
 }
 
 .hero-badges {
